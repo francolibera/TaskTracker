@@ -14,12 +14,12 @@ Built with **Node.js** and **TypeScript**, using a JSON file (`tasks.json`) for 
 1. Clone the repository:
    ```
    git clone [https://github.com/YOUR_USER/task-tracker.git](https://github.com/YOUR_USER/task-tracker.git)
-   ```
-``` cd task-tracker```
-```pnpm install or npm install / yarn install```
-###🛠️ How to Run
+```bash
+cd task-tracker
+pnpm install
+# or: npm install / yarn install
+🛠️ How to Run
 You can run the application using the custom script tt. This will build the TypeScript code and execute it in one step.
-
 Select your package manager to see the commands:
 
 Basic Commands
@@ -47,6 +47,7 @@ List tasks by their current status:
 The application uses a local tasks.json file to store your data.
 
 Note: You don't need to manually create the file. The application is smart enough to check if tasks.json exists; if it doesn't, it will automatically create it when you add your first task. You can also force creation using pnpm run tt init, but it is optional.
+
 
 
 
