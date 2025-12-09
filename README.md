@@ -1,9 +1,49 @@
-Hi this is a Task Tracker, project from roadmaps.sh, made using Node.js and TypeScript. I used fs and json for the data base. Its pretty basic and simple but works!
+# Task Tracker CLI
 
-Use the command pnpm run tt if you use pnpm, npm run tt if you use npm, or yarn tt if you use Yarn and next to it one of the commands! 
- Available commands: init, list, add (description), update(description), mark-in-progress(id), mark-done(id), delete(id), filter('to-do' | 'in-progress' | 'done')
+A simple command-line interface (CLI) to track your tasks and manage your to-do list. This project is part of the [roadmap.sh](https://roadmap.sh/projects/task-tracker) backend developer path.
 
- The init one creates the tasks.json if it doesnt exists! Its kinda useless because if you try to use the other commands like add for example, if you dont have task.json created just its going to create the json anyways and then add the new task that you just sent!
+Built with **Node.js** and **TypeScript**, using a JSON file (`tasks.json`) for data persistence.
 
- https://roadmap.sh/projects/task-tracker
+## 🚀 Getting Started
 
+### Prerequisites
+- Node.js installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone [https://github.com/YOUR_USER/task-tracker.git](https://github.com/YOUR_USER/task-tracker.git)
+   cd task-tracker
+   pnpm install
+   # or npm install / yarn install
+🛠️ How to Run
+You can run the application using the custom script tt. This will build the TypeScript code and execute it in one step.
+
+Select your package manager to see the commands:
+
+Basic Commands
+| Action | Command Example |
+| :--- | :--- |
+| Add a task | `pnpm run tt add "Buy groceries"` |
+| List all tasks | `pnpm run tt list` |
+| Update a task | `pnpm run tt update 1 "Buy groceries and milk"` |
+| Delete a task | `pnpm run tt delete 1` |
+
+Task Status Management
+You can change the status of your tasks using their ID:
+# Mark as In Progress
+pnpm run tt mark-in-progress 1
+
+# Mark as Done
+pnpm run tt mark-done 1
+
+Filtering Tasks
+List tasks by their current status:
+    pnpm run tt list done
+    pnpm run tt list to-do
+    pnpm run tt list in-progress
+    
+The application uses a local tasks.json file to store your data.
+
+Note: You don't need to manually create the file. The application is smart enough to check if tasks.json exists; if it doesn't, it will automatically create it when you add your first task. You can also force creation using pnpm run tt init, but it is optional.
